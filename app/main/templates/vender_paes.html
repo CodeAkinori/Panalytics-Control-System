@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vender Pães</title>
+    <link rel="stylesheet" href="../static/vender.css">
+</head>
+<body>
+    <h1>Vender Pães</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="quantidade_vendida">Quantidade de Pães Vendidos:</label>
+        <input type="number" id="quantidade_vendida" name="quantidade_vendida" required>
+        <label for="desconto">Desconto (%):</label>
+        <input type="number" id="desconto" name="desconto" min="0" max="100" value="0">
+        <button type="submit">Vender</button>
+    </form>
+    
+</body>
+</html>
